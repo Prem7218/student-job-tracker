@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+# 🎓 Student Job Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application for students to track their job applications — built with **React**, **Node.js**, **Express**, and **MongoDB**.
 
-## Available Scripts
+Live Demo:
+- 🔗 Frontend: [https://student-job-tracker-five.vercel.app/](https://student-job-tracker-five.vercel.app/)
+- 🔗 Backend API: [https://job-tracker-backend-j83w.onrender.com/api/jobs](https://job-tracker-backend-j83w.onrender.com/api/jobs)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📦 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Layer      | Tech                    |
+|------------|-------------------------|
+| Frontend   | React + Hooks, Tailwind CSS |
+| Backend    | Node.js, Express.js     |
+| Database   | MongoDB Atlas           |
+| Deployment | Vercel (Frontend), Render (Backend) |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠 Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ✅ Add job applications
+- ✅ Edit application status
+- ✅ Delete job entries
+- ✅ Filter by job status (All, Applied, Interview, Offer, Rejected)
+- ✅ Responsive UI with Tailwind CSS
+- ✅ REST API using Express
+- ✅ MongoDB for persistent storage
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧪 API Endpoints
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Base URL:
+https://job-tracker-backend-j83w.onrender.com/api/jobs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+sql
+Copy
+Edit
 
-### `npm run eject`
+| Method | Endpoint        | Description               |
+|--------|------------------|---------------------------|
+| GET    | `/jobs`          | Fetch all job entries     |
+| POST   | `/jobs`          | Create a new job entry    |
+| PUT    | `/jobs/:id`      | Update a job’s status     |
+| DELETE | `/jobs/:id`      | Delete a job entry        |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🧱 Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+job-tracker-backend/ ├── models/ │ └── Job.js ├── routes/ │ └── jobRoutes.js ├── server.js ├── .env (not committed) ├── package.json
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+student-job-tracker/ ├── src/ │ ├── components/ │ │ ├── JobForm.js │ │ ├── JobItem.js │ │ ├── JobList.js │ │ └── FilterBar.js │ ├── services/ │ │ └── api.js │ └── App.js ├── public/ ├── .env (Vercel env vars recommended) ├── package.json
 
-## Learn More
+yaml
+Copy
+Edit
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🌐 Environment Variables
 
-### Code Splitting
+### Backend (`.env`)
+MONGO_URI=your_mongo_connection_string PORT=5000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+shell
+Copy
+Edit
 
-### Analyzing the Bundle Size
+### Frontend (Vercel → Environment → Add)
+REACT_APP_API_BASE_URL=https://job-tracker-backend-j83w.onrender.com/api
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+yaml
+Copy
+Edit
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🚀 Deployment
 
-### Advanced Configuration
+### Backend:
+- Deploy to [Render](https://render.com)
+- Set `MONGO_URI` & `PORT` env vars
+- Set Start command: `node server.js`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Frontend:
+- Deploy to [Vercel](https://vercel.com)
+- Add `REACT_APP_API_BASE_URL` env var
+- Vercel auto-detects React (no extra config needed)
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📸 Screenshots
 
-### `npm run build` fails to minify
+> Add screenshots here using Markdown:
+```md
+![Home Screen](screenshots/home.png)
+🤝 Contributions
+Contributions are welcome!
+Feel free to fork the repo and submit pull requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📄 License
+This project is open-source and available under the MIT License.
+
+✨ Credits
+Built by @Prem7218 🙌
+With guidance from ChatGPT 🤖
+
+yaml
+Copy
+Edit
+
+---
+
+## ✅ Tips:
+- Replace `https://student-job-tracker-five.vercel.app/` with your actual deployed frontend URL.
+- Add a `screenshots/` folder if you'd like to include UI previews.
+- Optional: Upload this `README.md` to both **frontend and backend repos**.
+
+Let me know if you'd like a version customized for your GitHub repo's README preview (with badges, links, etc.). 💪
