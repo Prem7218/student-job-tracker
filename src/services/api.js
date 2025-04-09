@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: process.env.REACT_APP_API_BASE_URL, });
+const API = axios.create({ baseURL: 'https://job-tracker-backend-j83w.onrender.com/api' });
 
 export const getJobs = () => API.get('/jobs');
 export const addJob = (jobData) => API.post('/jobs', jobData);
